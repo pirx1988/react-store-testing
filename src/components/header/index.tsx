@@ -10,7 +10,6 @@ const Header = (props: headerProps) => {
                 <div className = "wrap">
                     <div className="logo">
                         <img data-test="logoIMG" src = {Logo} alt="Logo"/>
-
                     </div>
                 </div>
             </header>
