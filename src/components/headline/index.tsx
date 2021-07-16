@@ -1,7 +1,16 @@
 import React, {Component} from 'react'
+import PropTypes from 'prop-types';
+export interface Person {
+    fName: string,
+    lName: string,
+    email: string,
+    age: number,
+    onlineStatus: boolean
+}
 export  interface HeadlineProps {
     header?: string,
     desc?: string,
+    // tempArr: Person[]
 }
 
 class Headline extends Component<HeadlineProps, any> {
