@@ -20,8 +20,6 @@ describe('App Component', () => {
         })
 
         it('Should render without errors', () => {
-
            const component = findByTestAttr(wrapper, 'appComponent');
-           console.log(wrapper);
         })
 })
