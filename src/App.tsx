@@ -37,7 +37,7 @@ const App = (props: AppConnectedProps) => {
     const {posts} = props;
 
     return (
-        <div className="App">
+        <div className="App" data-test="appComponent">
             <Header/>
             <section className="main">
                 <Headline header="Test header" desc="Click the button to render posts"/>

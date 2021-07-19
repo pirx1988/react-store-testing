@@ -27,8 +27,8 @@ describe('fetchPosts action', () => {
             config: {}
         }
         mockedAxios.get.mockResolvedValueOnce(mockedResponse);
-       const store = testStore({posts: []});
-        await store.dispatch(fetchPosts() as any);
+        const store = testStore({posts: []});
+        await (store.dispatch as ThunkDispatch<State, unknown, Action>)(fetchPosts() as any);
         const newState = store.getState();
         expect(newState.posts).toEqual(mockedResponse.data);
         expect(newState.posts).not.toBe(mockedResponse.data);
