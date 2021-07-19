@@ -21,5 +21,6 @@ describe('App Component', () => {
 
         it('Should render without errors', () => {
            const component = findByTestAttr(wrapper, 'appComponent');
+            expect(component.length).toBe(1)
         })
 })
