@@ -29,7 +29,8 @@
     "test": "react-scripts test",
     "test:coverage": "react-scripts test --coverage --runInBand --watchAll=false",
     "eject": "react-scripts eject",
-    "isready": "npm run format && npm run lint && npm run test:coverage && npm run build"
+    "isready": "npm run format && npm run lint && npm run test:coverage && npm run build",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -103,6 +104,7 @@
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.6",
     "enzyme-to-json": "3.6.2",
+    "husky": "^7.0.1",
     "jest-fetch-mock": "3.0.3",
     "ts-jest": "27.0.3"
   }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Header from "./components/header";
 import {connect} from "react-redux";
 
@@ -27,12 +27,23 @@ interface AppConnectedProps {
     posts: Post[]
 }
 
+const initialStateButton: boolean = false;
+
 const App = (props: AppConnectedProps) => {
 
+    const [hideBtn, setHideBtn] = useState<boolean>(initialStateButton);
+
+    const toggleButtonVisibility = () => {
+        setHideBtn(!hideBtn);
+    }
+    const fetch = () => {
+        props.fetchPosts();
+        toggleButtonVisibility();
+    }
 
     const configButton = {
         buttonText: "Get posts",
-        emitEvent: props.fetchPosts
+        emitEvent: fetch
     }
     const {posts} = props;
 
@@ -41,7 +52,9 @@ const App = (props: AppConnectedProps) => {
             <Header/>
             <section className="main">
                 <Headline header="Test header" desc="Click the button to render posts"/>
+                {!hideBtn &&
                 <SharedButton {...configButton}/>
+                }
                 {posts.length > 0 &&
                 <div>
                     {posts.map((post: Post) => {

@@ -26,4 +26,8 @@ describe('App Component', () => {
            const component = findByTestAttr(wrapper, 'appComponent');
             expect(component.length).toBe(1)
         })
+        it('Should update state after calling method toggleButtonVisibility', () =>{
+            const componentInstance = wrapper.instance().context;
+            componentInstance
+        })
 })
