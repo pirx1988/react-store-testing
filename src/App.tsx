@@ -32,7 +32,6 @@ const initialStateButton: boolean = false;
 const App = (props: AppConnectedProps) => {
 
     const [hideBtn, setHideBtn] = useState<boolean>(initialStateButton);
-
     const toggleButtonVisibility = () => {
         setHideBtn(!hideBtn);
     }
